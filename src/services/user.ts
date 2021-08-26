@@ -29,3 +29,21 @@ export const getUserInfo = () => {
     url: '/front/user/getInfo'
   })
 }
+
+export const getUserPages = (data: any) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/getUserPages',
+    data
+  })
+}
+
+export const forbidUser = (userId: string | number) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/forbidUser',
+    params: {
+      userId
+    }
+  })
+}

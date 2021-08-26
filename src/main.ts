@@ -8,9 +8,10 @@ import ElementUI from 'element-ui'
 // 加载全局样式
 import './styles/index.scss'
 
-Vue.use(ElementUI)
+Vue.use(ElementUI, {
+  size: 'small'
+})
 
-// 关闭生成环境提示
 Vue.config.productionTip = false
 
 new Vue({

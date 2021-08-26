@@ -5,7 +5,6 @@ import router from '@/router'
 import qs from 'qs'
 const request = axios.create({
 // 配置选项
-// baseURL,
 // timeout
 })
 function redirectLogin () {
@@ -78,6 +77,7 @@ request.interceptors.response.use(function (response) {
           return request(error.config)
         }).catch(err => {
           console.log(err)
+          Message.warning('登录已过期，请重新登录')
           store.commit('setUser', null)
           redirectLogin()
           return Promise.reject(error)

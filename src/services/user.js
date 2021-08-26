@@ -20,4 +20,20 @@ export const getUserInfo = () => {
     url: '/front/user/getInfo'
   })
 }
+export const getUserPages = (data) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/getUserPages',
+    data
+  })
+}
+export const forbidUser = (userId) => {
+  return request({
+    method: 'POST',
+    url: '/boss/user/forbidUser',
+    params: {
+      userId
+    }
+  })
+}
 // # sourceMappingURL=user.js.map
